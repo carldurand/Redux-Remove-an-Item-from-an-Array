@@ -1,14 +1,18 @@
-Redux: Send Action Data to the Store
-By now you've learned how to dispatch actions to the Redux store, but so far these actions have not contained any information other than a type. You can also send specific data along with your actions. In fact, this is very common because actions usually originate from some user interaction and tend to carry some data with them. The Redux store often needs to know about this data.
+Redux: Write a Counter with Redux
+Now you've learned all the core principles of Redux! You've seen how to create actions and action creators, create a Redux store, dispatch your actions against the store, and design state updates with pure reducers. You've even seen how to manage complex state with reducer composition and handle asynchronous actions. These examples are simplistic, but these concepts are the core principles of Redux. If you understand them well, you're ready to start building your own Redux app. The next challenges cover some of the details regarding state immutability, but first, here's a review of everything you've learned so far.
 
 
-There's a basic notesReducer() and an addNoteText() action creator defined in the code editor. Finish the body of the addNoteText() function so that it returns an action object. The object should include a type property with a value of ADD_NOTE, and also a text property set to the note data that's passed into the action creator. When you call the action creator, you'll pass in specific note information that you can access for the object.
-
-Next, finish writing the switch statement in the notesReducer(). You need to add a case that handles the addNoteText() actions. This case should be triggered whenever there is an action of type ADD_NOTE and it should return the text property on the incoming action as the new state.
-
-The action is dispatched at the bottom of the code. Once you're finished, run the code and watch the console. That's all it takes to send action-specific data to the store and use it when you update store state.
+In this lesson, you'll implement a simple counter with Redux from scratch. The basics are provided in the code editor, but you'll have to fill in the details! Use the names that are provided and define incAction and decAction action creators, the counterReducer(), INCREMENT and DECREMENT action types, and finally the Redux store. Once you're finished you should be able to dispatch INCREMENT or DECREMENT actions to increment or decrement the state held in the store. Good luck building your first Redux app!
 
 Passed
-The action creator addNoteText should return an object with keys type and text.
+The action creator incAction should return an action object with type equal to the value of INCREMENT
 Passed
-Dispatching an action of type ADD_NOTE with the addNoteText action creator should update the state to the string passed to the action creator.
+The action creator decAction should return an action object with type equal to the value of DECREMENT
+Passed
+The Redux store should initialize with a state of 0.
+Passed
+Dispatching incAction on the Redux store should increment the state by 1.
+Passed
+Dispatching decAction on the Redux store should decrement the state by 1.
+Passed
+counterReducer should be a function
